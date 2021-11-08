@@ -2,12 +2,7 @@ import paper from "../Images/paper.png";
 import rock from "../Images/rock.png";
 import scissor from "../Images/scissor.png";
 
-const Computer = () => {
-    const tools = ["Rock", "Paper", "Scissor"];
-    const random = Math.floor(Math.random() * tools.length);
-    const computerSelection = tools[random]
-    console.log(computerSelection)
-
+const Computer = ({ computerSelection }) => {
     return (
         <>
             <div className="cont3 cont col-md-4">
@@ -20,18 +15,18 @@ const Computer = () => {
                         <div className="paper col-4">
                             <img
                                 src={
-                                    (computerSelection === 'Rock')
+                                    computerSelection === "Rock"
                                         ? rock
-                                        : ((computerSelection === 'Paper')
+                                        : computerSelection === "Paper"
                                         ? paper
-                                        : (scissor))
+                                        : scissor
                                 }
                                 alt="paper"
                             />
                         </div>
                         <div className="scissor col-4"></div>
                     </div>
-                    <div className="yourchoice">PC Selected:</div>
+                    <div className="youruserSelection">PC Selected:{computerSelection}</div>
                 </div>
             </div>
         </>
