@@ -5,28 +5,26 @@ import scissor from "../Images/scissor.png";
 const Computer = ({ computerSelection }) => {
     return (
         <>
-            <div className="cont3 cont col-md-4">
-                <div className="card">
-                    <div className="player">
-                        <h1>Computer</h1>
+            <div className="card col-lg-4 col-11">
+                <h1>Computer</h1>
+                <div className="rps">
+                    <div className="rock col-4"></div>
+                    <div className="paper col-4">
+                        <img
+                            src={
+                                computerSelection === "Rock"
+                                    ? rock
+                                    : computerSelection === "Paper"
+                                    ? paper
+                                    : scissor
+                            }
+                            alt="paper"
+                        />
                     </div>
-                    <div className="rps">
-                        <div className="rock col-4"></div>
-                        <div className="paper col-4">
-                            <img
-                                src={
-                                    computerSelection === "Rock"
-                                        ? rock
-                                        : computerSelection === "Paper"
-                                        ? paper
-                                        : scissor
-                                }
-                                alt="paper"
-                            />
-                        </div>
-                        <div className="scissor col-4"></div>
-                    </div>
-                    <div className="youruserSelection">PC Selected:{computerSelection}</div>
+                    <div className="scissor col-4"></div>
+                </div>
+                <div className="youruserSelection">
+                    PC Selected: {computerSelection}
                 </div>
             </div>
         </>
@@ -34,3 +32,25 @@ const Computer = ({ computerSelection }) => {
 };
 
 export default Computer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,41 +1,72 @@
-.App {
+.app {
     height: 100vh;
-    background-color: palegoldenrod;
-    overflow-y: hidden;
+    background-color: beige;
+    overflow: hidden;
+    margin: auto;
+}
+.main-container {
+    max-width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.components {
+    width: 90%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    text-align: center;
+    height: 230px;
+    padding:1rem
+}
+.cardd {
+    background-color: transparent;
+    height: 230px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
 }
+.rps {
+    display: flex;
 
-h1 {
-    margin: 0;
 }
-.containers {
-    display: flex;
-    justify-content: center;
-}
-.card {
-    height: 230px;
-    border-radius: 20px !important;
-}
-.player{
-    margin-top: 1.5rem;
-}
-.rps{
-    display: flex;
-}
-.youruserSelection{
-    margin-top: 1rem;
-}
-img{
-    height:5.5rem;
-    border-radius: 50%;
-    padding:.4rem
+img {
+    height: 5rem;
+    margin-bottom: 2rem;
+
+    border-radius: 50%;;
+
+
 }
 img:hover{
-    background-color: rgb(161, 155, 155);
-    transition: transform .1s,-webkit-transform .1s;
+    background-color: #e0e0e0;
+    transition: transform .1s;
     transform: scale(1.1);
+
+}
+.points_cont{
+    width:90%;
+    display: flex;
+    text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+    .main-container {
+        max-width: 98%;
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+    .main-container {
+        max-width: 85%;
+    }
+    .components {
+        width: 100%;
+        margin: 30px;
+    }
 }

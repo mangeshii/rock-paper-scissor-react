@@ -8,50 +8,59 @@ const User = (props) => {
 
     return (
         <>
-            <div className="cont1 cont col-md-4">
-                <div className="card">
-                    <div className="player">
-                        <h1>Player 1</h1>
+            <div className="card col-lg-4 col-11">
+                <div className="player">
+                    <h1>Player 1</h1>
+                </div>
+                <div className="rps">
+                    <div className="rock col-4">
+                        <img
+                            src={rock}
+                            alt="rock"
+                            onClick={() => handleOnClick("Rock")}
+                        />
                     </div>
-                    <div className="rps">
-                        <div className="rock col-4">
-                            <img
-                                src={rock}
-                                alt="rock"
-                                onClick={() => handleOnClick("Rock")}
-                            />
-                        </div>
-                        <div className="paper col-4">
-                            <img
-                                src={paper}
-                                alt="paper"
-                                onClick={() => handleOnClick("Paper")}
-                            />
-                        </div>
-                        <div className="scissor col-4">
-                            <img
-                                src={scissor}
-                                alt="scissor"
-                                onClick={() => handleOnClick("Scissor")}
-                            />
-                        </div>
+                    <div className="paper col-4">
+                        <img
+                            src={paper}
+                            alt="paper"
+                            onClick={() => handleOnClick("Paper")}
+                        />
                     </div>
-                    <div className="youruserSelection">
-                        Your choice: {userSelection}
+                    <div className="scissor col-4">
+                        <img
+                            src={scissor}
+                            alt="scissor"
+                            onClick={() => handleOnClick("Scissor")}
+                        />
                     </div>
                 </div>
+                <div className="youruserSelection">
+                    {userSelection === ""
+                        ? "Pick one!"
+                        : `Your choice: ${userSelection}`}
+                </div>
             </div>
-            <div className="cont2 cont col-md-3">
+            <div className="cardd col-lg-3 col-11">
                 <div className="cards">
-                    <p>
+                    <h3>
                         <WinningLogic
                             userSelection={userSelection}
                             computerSelection={computerSelection}
                         />
-                    </p>
+                    </h3>
                 </div>
             </div>
         </>
     );
 };
 export default User;
+
+
+
+
+
+
+
+
+
