@@ -11,6 +11,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    border: 2px solid red;
+    height: 100%;
 }
 .components {
     width: 90%;
@@ -19,42 +21,54 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-.card {
-    text-align: center;
-    height: 230px;
-    padding:1rem
+.users,
+.computer {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
 }
 .cardd {
-    background-color: transparent;
-    height: 230px;
+    padding: 3rem;
+    height: 100%;
+    border:2px solid red
+}
+.user-selection-icons {
+    display: flex;
+}
+.user-selection-icons div {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-.rps {
-    display: flex;
-
-}
-img {
+.img {
     height: 5rem;
-    margin-bottom: 2rem;
-
-    border-radius: 50%;;
-
-
+    padding: 0.5rem;
+    border-radius: 50%;
 }
-img:hover{
+
+.img:hover {
     background-color: #e0e0e0;
-    transition: transform .1s;
+    transition: transform 0.1s;
     transform: scale(1.1);
-
 }
-.points_cont{
-    width:90%;
-    display: flex;
+.large-icon {
+    text-align: center;
+    margin: 4rem;
+}
+.large-img {
+    height: 8rem;
+}
+
+.cardd h2,
+.pc-selection-msg {
     text-align: center;
 }
+.message-card {
+    text-align: center;
+    margin: auto 0;
+}
+.points{
+    text-align: center;
+}
+/*
 @media only screen and (max-width: 1200px) {
     .main-container {
         max-width: 98%;
@@ -69,4 +83,33 @@ img:hover{
         width: 100%;
         margin: 30px;
     }
+} */
+
+/* .rps {
+    display: flex;
+
 }
+img {
+    height: 3rem;
+    margin-bottom: 2rem;
+
+    border-radius: 50%;;
+
+
+}
+img:hover{
+    background-color: #e0e0e0;
+    transition: transform .1s;
+    transform: scale(1.1);
+
+
+}
+.points_cont{
+    width:90%;
+    display: flex;
+    text-align: center;
+}
+.user-selection{
+    border:2px solid red;
+    display: flex;
+} */
