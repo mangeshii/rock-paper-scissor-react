@@ -24,13 +24,13 @@ function App() {
         random();
     };
 
-    const handleReset=()=>{
-        setRounds(0)
-        setUserPoints(0)
-        setComputerPoints(0)
-        setUserSelection("")
-        setComputerSelection("")
-    }
+    const handleReset = () => {
+        setRounds(0);
+        setUserPoints(0);
+        setComputerPoints(0);
+        setUserSelection("");
+        setComputerSelection("");
+    };
 
     useEffect(() => {
         if (
@@ -67,11 +67,20 @@ function App() {
                             computerSelection={computerSelection}
                             computerPoints={computerPoints}
                             userPoints={userPoints}
-
                         />
                     </div>
-                    <button className="reset-btn" onClick={handleReset}>reset</button>
 
+                    <div className="btn">
+                        {userPoints === 10 || computerPoints === 10 ? (
+                            <button className="reset-btn" onClick={handleReset}>
+                                play again
+                            </button>
+                        ) : (
+                            <button className="reset-btn" onClick={handleReset}>
+                                reset
+                            </button>
+                        )}
+                    </div>
                 </div>
             </div>
         </>

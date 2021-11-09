@@ -4,6 +4,7 @@ import scissor from "../Images/scissor.png";
 import small_rock from "../Images/small_rock.svg";
 import small_paper from "../Images/small_paper.svg";
 import small_scissor from "../Images/small_scissor.svg";
+import victory from "../Images/victory.png"
 import WinningLogic from "./Wins";
 
 const User = (props) => {
