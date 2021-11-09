@@ -19,8 +19,7 @@ const WinningLogic = (props) => {
         return "user wins";
     } else if (userSelection === "Scissor" && computerSelection === "Rock") {
         return "computer wins";
-    }
-    else {
+    } else {
         return "vs";
     }
 };

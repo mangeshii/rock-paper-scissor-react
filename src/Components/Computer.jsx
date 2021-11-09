@@ -2,13 +2,17 @@ import paper from "../Images/paper.png";
 import rock from "../Images/rock.png";
 import scissor from "../Images/scissor.png";
 
-const Computer = ({ computerSelection ,computerPoints}) => {
+const Computer = ({ computerSelection, computerPoints, tiePoints }) => {
     return (
         <>
             <div className="computer col-lg-4 col-11">
                 <div className="points">
-                <div className="win"><h2>WIN</h2></div>
-                    <div className="win-points">{computerPoints}</div>
+                    <div className="win">
+                        <h4>WIN</h4>
+                    </div>
+                    <div className="win-points">
+                        <h1>{computerPoints}</h1>
+                    </div>
                 </div>
                 <div className="computer-card cardd">
                     <div className="computer-heading">
@@ -32,9 +36,11 @@ const Computer = ({ computerSelection ,computerPoints}) => {
                         </div>
                     </div>
                     <div className="pc-selection-msg">
-                        {computerSelection === ""
-                            ? "Waiting for your selection!"
-                            : `PC Selected: ${computerSelection}`}
+                        <h5>
+                            {computerSelection === ""
+                                ? "Waiting for your selection!"
+                                : `PC Selected: ${computerSelection}`}
+                        </h5>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ function App() {
     const [userPoints, setUserPoints] = useState(0);
     const [computerPoints, setComputerPoints] = useState(0);
 
+
     const tools = ["Rock", "Paper", "Scissor"];
 
     const random = () => {
@@ -44,7 +45,7 @@ function App() {
         <>
             <div className="app">
                 <div className="main-container">
-                    <h2>ROUND {rounds} </h2>
+                    <h2 className="rounds">ROUND {rounds} </h2>
 
                     <div className="components">
                         <User
@@ -57,8 +58,8 @@ function App() {
                         <Computer
                             computerSelection={computerSelection}
                             computerPoints={computerPoints}
-                        />
 
+                        />
                     </div>
                 </div>
             </div>
