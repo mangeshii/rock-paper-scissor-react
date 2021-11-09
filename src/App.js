@@ -60,11 +60,13 @@ function App() {
                             userSelection={userSelection}
                             computerSelection={computerSelection}
                             userPoints={userPoints}
+                            computerPoints={computerPoints}
                         />
 
                         <Computer
                             computerSelection={computerSelection}
                             computerPoints={computerPoints}
+                            userPoints={userPoints}
 
                         />
                     </div>

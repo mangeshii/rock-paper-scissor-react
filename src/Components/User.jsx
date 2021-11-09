@@ -7,7 +7,7 @@ import small_scissor from "../Images/small_scissor.svg";
 import WinningLogic from "./Wins";
 
 const User = (props) => {
-    const { handleOnClick, userSelection, computerSelection, userPoints } =
+    const { handleOnClick, userSelection, computerSelection, userPoints,computerPoints } =
         props;
 
     return (
@@ -74,6 +74,8 @@ const User = (props) => {
                         <WinningLogic
                             userSelection={userSelection}
                             computerSelection={computerSelection}
+                            computerPoints={computerPoints}
+                            userPoints={userPoints}
                         />
                     </h3>
                 </div>

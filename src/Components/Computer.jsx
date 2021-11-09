@@ -1,8 +1,9 @@
 import paper from "../Images/paper.png";
 import rock from "../Images/rock.png";
 import scissor from "../Images/scissor.png";
+import victory from "../Images/victory.png"
 
-const Computer = ({ computerSelection, computerPoints, tiePoints }) => {
+const Computer = ({ computerSelection, computerPoints}) => {
     return (
         <>
             <div className="computer col-lg-4 col-11">

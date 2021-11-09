@@ -1,5 +1,6 @@
 const WinningLogic = (props) => {
-    const { userSelection, computerSelection } = props;
+    const { userSelection, computerSelection, userPoints, computerPoints } =
+        props;
 
     if (
         (userSelection === "Rock" && computerSelection === "Rock") ||
@@ -7,6 +8,10 @@ const WinningLogic = (props) => {
         (userSelection === "Scissor" && computerSelection === "Scissor")
     ) {
         return "Its a tie";
+    } else if (userPoints === 10) {
+        return "You Won";
+    } else if (computerPoints === 10) {
+        return "computer Won";
     } else if (userSelection === "Rock" && computerSelection === "Paper") {
         return "computer wins";
     } else if (userSelection === "Paper" && computerSelection === "Rock") {
