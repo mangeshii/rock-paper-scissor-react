@@ -85,3 +85,17 @@
     color: #9a9da6;
 }
 
+.reset-btn{
+    border:none;
+    height:3rem;
+    width:15rem;
+    margin-top: 5rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background-color:lightcoral;
+    color:white
+}
+.reset-btn:hover{
+    background-color: red;
+}

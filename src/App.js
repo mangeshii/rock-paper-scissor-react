@@ -11,7 +11,6 @@ function App() {
     const [userPoints, setUserPoints] = useState(0);
     const [computerPoints, setComputerPoints] = useState(0);
 
-
     const tools = ["Rock", "Paper", "Scissor"];
 
     const random = () => {
@@ -24,6 +23,14 @@ function App() {
         setUserSelection(props);
         random();
     };
+
+    const handleReset=()=>{
+        setRounds(0)
+        setUserPoints(0)
+        setComputerPoints(0)
+        setUserSelection("")
+        setComputerSelection("")
+    }
 
     useEffect(() => {
         if (
@@ -61,6 +68,8 @@ function App() {
 
                         />
                     </div>
+                    <button className="reset-btn" onClick={handleReset}>reset</button>
+
                 </div>
             </div>
         </>
